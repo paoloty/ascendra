@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/styles.min.css">
+</head>
+
+<body>
+
+  <div class="relative bg-black shadow h-[56px] lg:h-[64px] w-full sticky top-0 z-20 px-8">
+    <div class="flex flex-row items-center justify-between h-full font-sans text-white text-xs uppercase tracking-wider">
+      <div class="flex flex-row gap-x-4">
+        <div>Home</div>
+        <div>Products</div>
+        <div>Packages</div>
+        <div>Founders</div>
+      </div>
+      <div class="font-bold bg-[#ff580a] py-2 px-3 mb-2">
+        Become A Member
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col lg:flex-row w-full h-full items-center bg-[#ffd5c2] border-b-4 border-[#fdc43f]">
+    <div class="flex items-center justify-center w-full lg:w-1/2 bg-[#f0ede8]">
+      <img src="assets/Hero.png" alt="" class="w-full max-w-[845px]">
+    </div>
+    <div class="flex w-full lg:w-1/2 h-full items-center justify-center px-4 py-8 lg:p-0">
+      <div class="flex flex-col gap-y-2 items-center justify-center w-full text-center h-full max-w-[455px]">
+        <div class="font-sans text-xs tracking-widest uppercase font-bold text-[#ff580a]">
+          Lorem ipsum dolor sit amet
+        </div>
+        <div class="font-display text-2xl lg:text-4xl">
+          Nam vel bibendum nulla, a pellentesque nisi!
+        </div>
+        <div class="font-sans text-sm">
+          Aenean suscipit libero sit amet justo pretium, eu posuere ligula rutrum.
+        </div>
+        <div class="font-sans text-sm tracking-widest uppercase font-bold text-white bg-black py-4 px-5 mt-2">
+          Become A Member
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-12 lg:py-16">
+    <div class="flex flex-col gap-y-2 items-center justify-center px-4 lg:px-0 w-full max-w-[1238px] mx-auto text-center">
+      <div class="font-sans text-xs tracking-widest uppercase font-bold text-[#ff580a]">
+        OUR PRODUCTS
+      </div>
+      <div class="font-display text-2xl lg:text-4xl mb-4">
+        Nam vel bibendum nulla, a pellentesque nisi!
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4 w-full mt-4">
+         <div>
+          <div class="flex flex-col gap-y-2 items-center justify-center h-full">
+            <div class="bg-[#fee7b2] h-[240px] w-full"></div>
+            <div class="uppercase text-sm font-bold py-1">Best Barley</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-black py-4 px-5 cursor-pointer">Quick Buy</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-[#ff580a] py-4 px-5 cursor-pointer">More Info</div>
+          </div>
+        </div>
+         <div>
+          <div class="flex flex-col gap-y-2 items-center justify-center h-full">
+            <div class="bg-[#fee7b2] h-[240px] w-full"></div>
+            <div class="uppercase text-sm font-bold py-1">Barley Fusion</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-black py-4 px-5 cursor-pointer">Quick Buy</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-[#ff580a] py-4 px-5 cursor-pointer">More Info</div>
+          </div>
+        </div>
+         <div>
+          <div class="flex flex-col gap-y-2 items-center justify-center h-full">
+            <div class="bg-[#fee7b2] h-[240px] w-full"></div>
+            <div class="uppercase text-sm font-bold py-1">O-mega Life</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-black py-4 px-5 cursor-pointer">Quick Buy</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-[#ff580a] py-4 px-5 cursor-pointer">More Info</div>
+          </div>
+        </div>
+         <div>
+          <div class="flex flex-col gap-y-2 items-center justify-center h-full">
+            <div class="bg-[#fee7b2] h-[240px] w-full"></div>
+            <div class="uppercase text-sm font-bold py-1">Basic AI</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-black py-4 px-5 cursor-pointer">Quick Buy</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-[#ff580a] py-4 px-5 cursor-pointer">More Info</div>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-col gap-y-2 items-center justify-center h-full">
+            <div class="bg-[#fee7b2] h-[240px] w-full"></div>
+            <div class="uppercase text-sm font-bold py-1">Premium AI</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-black py-4 px-5 cursor-pointer">Add to Cart</div>
+            <div class="font-sans text-sm w-full tracking widest uppercase font-bold text-white bg-[#ff580a] py-4 px-5 cursor-pointer">More Info</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    x-data="{
+      selectedPackage: '',
+      packages: [],
+      init () {
+        this.packages = packages;
+        this.selectedPackage = Object.keys(this.packages)[0];
+      }
+    }"
+    x-init="init()"
+    class="bg-[#fff6f3] py-12 lg:py-16"
+  >
+    <div class="flex flex-col gap-y-2 items-center justify-center px-4 lg:px-0 w-full max-w-[1238px] mx-auto text-center">
+      <div class="font-sans text-xs tracking-widest uppercase font-bold text-[#ff580a]">
+        MEMBERSHIP PACKAGES
+      </div>
+      <div class="font-display text-2xl lg:text-4xl mb-4">
+        Nam vel bibendum nulla, a pellentesque nisi!
+      </div>
+      <div class="flex flex-row items-center justify-center gap-2 w-full mt-4">
+        <template x-for="([key, package], index) in Object.entries(packages)" :key="key">
+          <div
+            class="flex flex-row gap-2 text-center text-sm text-white font-bold tracking-widest uppercase cursor-pointer"
+            @click.prevent="selectedPackage = key"
+          >
+            <div
+              class="bg-black py-2 px-3"
+              :class="{'bg-[#ff580a]': key === selectedPackage}"
+              x-text="package.label"
+            >
+            </div>
+          </div>
+        </template>
+      </div>
+      
+      <div class="flex flex-col mt-4 w-full">
+        <div class="grid grid-cols-4 w-full text-center">
+          <div class="flex flex-col items-center w-full bg-[#ffd5c2] text-center">
+            <div class="uppercase font-bold text-base bg-[#ff580a] w-full py-2">Products</div>
+            <div class="py-2 border-b border-white w-full">Best Barley</div>
+            <div class="py-2 border-b border-white w-full">Barley Fusion</div>
+            <div class="py-2 border-b border-white w-full">Omega Life</div>
+            <div class="py-2 border-b border-white w-full">Basic AI</div>
+            <div class="py-2 border-b border-white w-full">Premium AI</div>
+            <div class="py-2 border-b border-white w-full">Product Price</div>
+            <div class="bg-white"></div>
+          </div>
+          <div class="flex flex-col items-center w-full bg-[#ffecbe] text-center">
+            <div class="uppercase font-bold text-base bg-[#f9b200] text-[#976d01] w-full py-2">MVP</div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mvp.barley ? packages[selectedPackage].mvp.barley : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mvp.barleyFusion ? packages[selectedPackage].mvp.barleyFusion : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mvp.omega ? packages[selectedPackage].mvp.omega : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mvp.basicAi ? packages[selectedPackage].mvp.basicAi : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mvp.premiumAi ? packages[selectedPackage].mvp.premiumAi : '-'"></div>
+            <div class="py-2 border-b border-white w-full font-bold text-gray-400 line-through" x-text="`₱${(packages[selectedPackage].mvp.value.product).toLocaleString()}`"></div>
+            <div class="py-2">
+              <div
+                class="font-sans text-sm tracking widest uppercase font-bold text-white bg-black py-4 px-5 mt-2 cursor-pointer"
+                x-text="`Get Package - ₱${(packages[selectedPackage].mvp.value.package).toLocaleString()}`"
+              >
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center w-full bg-[#ececec] text-center">
+            <div class="uppercase font-bold text-base bg-[#b4b4b4] text-[#808080] w-full py-2">MP</div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mv.barley ? packages[selectedPackage].mv.barley : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mv.barleyFusion ? packages[selectedPackage].mv.barleyFusion : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mv.omega ? packages[selectedPackage].mv.omega : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mv.basicAi ? packages[selectedPackage].mv.basicAi : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mv.premiumAi ? packages[selectedPackage].mv.premiumAi : '-'"></div>
+            <div class="py-2 border-b border-white w-full font-bold text-gray-400 line-through" x-text="`₱${(packages[selectedPackage].mv.value.product).toLocaleString()}`"></div>
+            <div class="py-2">
+              <div
+                class="font-sans text-sm tracking widest uppercase font-bold text-white bg-black py-4 px-5 mt-2 cursor-pointer"
+                x-text="`Get Package - ₱${(packages[selectedPackage].mv.value.package).toLocaleString()}`"
+              >
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center w-full bg-[#dfdfdf] text-center">
+            <div class="uppercase font-bold text-base bg-[#b4b4b4] text-[#d9d9d9] w-full py-2">MP</div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mp.barley ? packages[selectedPackage].mp.barley : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mp.barleyFusion ? packages[selectedPackage].mp.barleyFusion : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mp.omega ? packages[selectedPackage].mp.omega : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mp.basicAi ? packages[selectedPackage].mp.basicAi : '-'"></div>
+            <div class="py-2 border-b border-white w-full" x-text="!!packages[selectedPackage].mp.premiumAi ? packages[selectedPackage].mp.premiumAi : '-'"></div>
+            <div class="py-2 border-b border-white w-full font-bold text-gray-400 line-through" x-text="`₱${(packages[selectedPackage].mp.value.product).toLocaleString()}`"></div>
+            <div class="py-2">
+              <div
+                class="font-sans text-sm tracking widest uppercase font-bold text-white bg-black py-4 px-5 mt-2 cursor-pointer"
+                x-text="`Get Package - ₱${(packages[selectedPackage].mp.value.package).toLocaleString()}`"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="py-12 lg:py-16">
+    <div class="flex flex-col gap-y-2 items-center justify-center px-4 lg:px-0 w-full max-w-[1238px] mx-auto text-center">
+      <div class="font-sans text-xs tracking-widest uppercase font-bold text-[#ff580a]">
+        Meet the founders
+      </div>
+      <div class="font-display text-2xl lg:text-4xl mb-4">
+        Nam vel bibendum nulla, a pellentesque nisi!
+      </div>
+      <div
+        x-data="{
+          founders: [],
+          players: [],
+          init ($el, $refs, $dispatch, $watch) {
+            this.$refs = $refs;
+            this.founders = founders;
+          },
+          play (video) {
+            let selectedVideo = video.querySelector('video');
+            !!selectedVideo.paused ? selectedVideo.play() : selectedVideo.pause();
+            //this.$refs.videos.querySelectorAll('video').forEach( (video) => { if (!!(video.paused) === false) { video.pause() } });
+            this.$refs.videos.querySelectorAll('video').forEach( (video) => {
+              if (video.dataset.key != selectedVideo.dataset.key) {
+                video.pause()
+              }
+            })
+
+          }
+        }"
+        x-init="init($el, $refs, $dispatch, $watch)"
+      >
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-4"
+          x-ref="videos"
+        >
+          <template x-for="([key, founder], index) in Object.entries(founders)" :key="key">
+            <div class="bg-[#fee7b2]">
+              <div class="flex items-center justify-center h-full" @click.prevent="play($el)">
+                <video class="w-full h-full relative z-10" :data-key="founder.key">
+                  <source :src="`assets/${founder.filename}`" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="assets/alpine.min.js"></script>
+
+  <script>
+    const founders = {
+      jurgen: {
+        key: "jurgen",
+        label: "Jurgen",
+        filename: "Reel-Founder-Jurgen.mp4"
+      },
+      joseph: {
+        key: "joseph",
+        label: "Joseph",
+        filename: "Reel-Founder-Joseph.mp4"
+      },
+      miko: {
+        key: "miko",
+        label: "Miko",
+        filename: "Reel-Founder-Miko.mp4"
+      },
+      cess: {
+        key: "cess",
+        label: "Cess",
+        filename: "Reel-Founder-Cess.mp4"
+      }
+    }
+    const packages = {
+      a: {
+        key: "a",
+        label: "Associate",
+        mvp: {
+          barley: 4,
+          barleyFusion: 1,
+          basicAi: 1,
+          value: {
+            product: 9600,
+            package: 8500
+          }
+        },
+        mv: {
+          barley: 5,
+          barleyFusion: 2,
+          value: {
+            product: 9600,
+            package: 8750
+          }
+        },
+        mp: {
+          basicAi: 3,
+          value: {
+            product: 10500,
+            package: 8500
+          }
+        }
+      },
+      b: {
+        key: "b",
+        label: "Builder",
+        mvp: {
+          barley: 10,
+          barleyFusion: 2,
+          basicAi: 2,
+          value: {
+            product: 21500,
+            package: 17500
+          }
+        },
+        mv: {
+          barley: 11,
+          barleyFusion: 2,
+          omega: 1,
+          value: {
+            product: 18850,
+            package: 17500
+          }
+        },
+        mp: {
+          basicAi: 6,
+          value: {
+            product: 21000,
+            package: 17500
+          }
+        }
+      },
+      c: {
+        key: "c",
+        label: "Consultant",
+        mvp: {
+          barley: 25,
+          barleyFusion: 4,
+          omega: 1,
+          basicAi: 4,
+          value: {
+            product: 51950,
+            package: 45500
+          }
+        },
+        mv: {
+          barley: 24,
+          barleyFusion: 12,
+          omega: 1,
+          value: {
+            product: 48800,
+            package: 45500
+          }
+        },
+        mp: {
+          basicAi: 12,
+          premiumAi: 2,
+          value: {
+            product: 52000,
+            package: 45500
+          }
+        }
+      },
+      d: {
+        key: "d",
+        label: "Director",
+        mvp: {
+          barley: 50,
+          barleyFusion: 6,
+          omega: 4,
+          basicAi: 10,
+          premiumAi: 2,
+          value: {
+            product: 124300,
+            package: 110500
+          }
+        },
+        mv: {
+          barley: 54,
+          barleyFusion: 30,
+          omega: 3,
+          value: {
+            product: 116700,
+            package: 110500
+          }
+        },
+        mp: {
+          basicAi: 32,
+          premiumAi: 4,
+          value: {
+            product: 13200,
+            package: 110500
+          }
+        }
+      },
+      e: {
+        key: "e",
+        label: "Executive",
+        mvp: {
+          barley: 94,
+          barleyFusion: 8,
+          omega: 5,
+          basicAi: 14,
+          premiumAi: 8,
+          value: {
+            product: 225100,
+            package: 199800
+          }
+        },
+        mv: {
+          barley: 96,
+          barleyFusion: 54,
+          omega: 6,
+          value: {
+            product: 210600,
+            package: 199800
+          }
+        },
+        mp: {
+          basicAi: 60,
+          premiumAi: 6,
+          value: {
+            product: 240000,
+            package: 199800
+          }
+        }
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
