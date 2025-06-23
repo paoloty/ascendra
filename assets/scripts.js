@@ -166,3 +166,13 @@ createCommonjsModule(function (module, exports) {
 	return init(function () {});
 }));
 });
+
+var OPTIONS = {
+  loo: true
+};
+var emblaNode = document.querySelector('.embla');
+var viewportNode = emblaNode.querySelector('.embla__viewport');
+emblaNode.querySelector('.embla__button--prev');
+emblaNode.querySelector('.embla__button--next');
+emblaNode.querySelector('.embla__dots');
+EmblaCarousel(viewportNode, OPTIONS);
